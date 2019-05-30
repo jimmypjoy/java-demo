@@ -9,7 +9,7 @@ public class HelloController {
     @RequestMapping("/greetings")
     public String index() {
         System.out.println("inside test program");
-    	return "Greetings from Spring Boot jimmy!";
+    	return "Greetings from Spring Boot and docker jimmy!";
     }
 
 }
