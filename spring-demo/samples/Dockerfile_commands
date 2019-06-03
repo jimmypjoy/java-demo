@@ -8,3 +8,42 @@ COPY ./target/spring-demo-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/spring-de
 #ENV JAVA_OPTS="=Dspring.profiles.active=spring-demo"
 
 CMD ["catalina.sh", "run"]
+
+# docker build image
+docker image build -t spring-demo:1.0 .
+
+# to find all networks
+docker network ls 
+docker run --name spring-demo -p 8080:8080 -it spring-demo:1.0 
+
+#run in detached mode
+docker run --name spring-demo -p 8080:8080 -d spring-demo:1.0
+
+#use rm to remove when the container stops
+docker run --name spring-demo -p 8080:8080 -it --rm spring-demo:1.0
+
+#rm container
+docker container rm spring-demo
+
+#to see logs of specific container
+docker container logs -f spring-demo
+
+# reclaim or cleanup all stopped containers
+docker container prune
+
+# get into the bash prompt of exiting containers
+docker container exec -it spring-demo bash
+docker container exec -it a9fb45140a1c48 bash
+
+#inspect container
+docker container inspect a9fb45140a1c48 bash
+
+# docker volume
+docker volume ls
+
+#start with volume
+docker run --name spring-demo -v tomcatlogs:/usr/local/tomcat/logs -p 8080:8080 -d spring-demo:1.0
+
+#list volumes
+docker volume ls
+docker volume inspect tomcatlogs
