@@ -71,6 +71,12 @@ docker run --name spring-demo -v /home/jj36034/docker/logs:/usr/local/tomcat/log
 docker volume ls
 docker volume inspect tomcatlogs
 
+############################### Docker hub and private repository ########################################
+#login to redhat registry 
+docker login registry.redhat.io
+#login to docker hub 
+docker login registry.redhat.io
+docker push jimmypjoy/spring-demo
 ############################### Openshift ########################################
 # Openshift
 oc login https://sd-eb5d-715f.nam.nsroot.net:844
