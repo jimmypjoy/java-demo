@@ -77,9 +77,13 @@ docker login registry.redhat.io
 #login to docker hub 
 docker login registry.redhat.io
 docker push jimmypjoy/spring-demo
+docker push registry.redhat.io/jimmypjoy/spring-demo
 ############################### Openshift ########################################
 # Openshift
 oc login https://sd-eb5d-715f.nam.nsroot.net:844
+#to get oc token
+oc whoami -t
+oc login --token=zQXftGzzynlQYaVIcozwtw_ca9S0zscFSz7QWz33pcE --server=https://api.us-west-2.online-starter.openshift.com:6443
 oc new-app /home/jj36034/docker --strategy=docker
 oc status
 oc project testproject
