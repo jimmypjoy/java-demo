@@ -72,8 +72,8 @@ docker volume ls
 docker volume inspect tomcatlogs
 
 ############################### Docker management ########################################
-docker ssytem df
-docker ssytem df -v
+docker system df
+docker system df -v
 
 ############################### Docker hub and private repository ########################################
 #login to redhat registry 
