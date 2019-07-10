@@ -71,7 +71,7 @@ docker run --name spring-demo -v /home/jj36034/docker/logs:/usr/local/tomcat/log
 docker volume ls
 docker volume inspect tomcatlogs
 
-############################### Docker managment ########################################
+############################### Docker management ########################################
 docker ssytem df
 docker ssytem df -v
 
