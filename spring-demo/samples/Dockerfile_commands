@@ -71,6 +71,10 @@ docker run --name spring-demo -v /home/jj36034/docker/logs:/usr/local/tomcat/log
 docker volume ls
 docker volume inspect tomcatlogs
 
+############################### Docker managment ########################################
+docker ssytem df
+docker ssytem df -v
+
 ############################### Docker hub and private repository ########################################
 #login to redhat registry 
 docker login registry.redhat.io
