@@ -72,6 +72,7 @@ docker volume ls
 docker volume inspect tomcatlogs
 
 ############################### Docker management ########################################
+# docker system memory usage
 docker system df
 docker system df -v
 
