@@ -17,6 +17,11 @@ docker images -a
 docker rmi <image name>
 #Delete All Docker Images
 docker rmi $(docker images -q)
+# docker image layers 
+docker history testwebapp:1.0
+docker image inspect testwebapp:1.0
+# removing all dangling images
+docker image prune
 ############################### Docker Run ########################################
 docker run --name spring-demo -p 8080:8080 -it spring-demo:1.0 
 #run in detached mode
