@@ -98,3 +98,4 @@ oc new-app /home/jj36034/docker --strategy=docker
 oc status
 oc project testproject
 oc new-app --docker-image="testwebapp:1.0"
+Test
