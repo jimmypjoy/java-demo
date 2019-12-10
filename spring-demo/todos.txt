@@ -1,0 +1,2 @@
+java 8 folder
+stream, lamda, reg, self problem covering: predicate, functioanl interface, static and instance method references, consumer
