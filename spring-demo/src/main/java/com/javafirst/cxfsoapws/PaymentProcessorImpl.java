@@ -1,7 +1,7 @@
-package com.bharath.ws.soap;
+package com.javafirst.cxfsoapws;
 
-import com.bharath.ws.soap.dto.PaymentProcessorRequest;
-import com.bharath.ws.soap.dto.PaymentProcessorResponse;
+import com.javafirst.cxfsoapws.dto.PaymentProcessorRequest;
+import com.javafirst.cxfsoapws.dto.PaymentProcessorResponse;
 
 public class PaymentProcessorImpl implements PaymentProcessor {
 
