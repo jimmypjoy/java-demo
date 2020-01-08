@@ -1,4 +1,4 @@
-package com.generics;
+package com.demo.java8.model;
 
 public class TestGeneric<S, T extends Number> {
 

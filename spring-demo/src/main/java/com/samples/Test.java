@@ -1,14 +1,14 @@
 package com.samples;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Test {
-	public static void main(String[] args) {
-		LocalDateTime date = LocalDateTime.of(2019, 1, 1, 10, 10);
-		DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL);
-		System.out.println(formatter.format(date));
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.print("Enter any number between 1 and 10: ");
+		int num = br.read();
+		System.out.println(num);
 	}
-
 }

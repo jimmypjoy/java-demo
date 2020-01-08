@@ -1,4 +1,6 @@
-package com.generics;
+package com.samples;
+
+import com.demo.java8.model.TestGeneric;
 
 public class GenericClient {
 	public static void main(String[] args) {
