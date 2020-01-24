@@ -22,8 +22,8 @@ public class HelloController {
 		// getting ApplicationContext
 //		System.out.println(personModel.getName());
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfigurationDemo.class);
-		PersonModel personModel = ctx.getBean(PersonModel.class);
-		System.out.println(personModel.getName());
+//		PersonModel personModel = ctx.getBean(PersonModel.class);
+//		System.out.println(personModel.getName());
 
 		//
 		return "Greetings from Spring Boot and docker jimmy!";
