@@ -5,6 +5,19 @@ import com.samples.oop.packageA.TestInterface2;
 import com.samples.oop.packageA.TestParentClassA;
 
 public class TestSubclassB extends TestParentClassA implements TestInterface1, TestInterface2 {
+	
+	public TestSubclassB() {
+		System.out.println("TestSubclassB: constructor");
+	}
+	
+	static {
+		System.out.println("TestSubclassB: static init");
+	}
+	
+	{
+		System.out.println("TestSubclassB: instance init");
+	}
+	
 	public static void main(String[] args) {
 		TestSubclassB testSubclassB = new TestSubclassB();
 		testSubclassB.test();
@@ -18,6 +31,8 @@ public class TestSubclassB extends TestParentClassA implements TestInterface1, T
 		
 		this.method1TestInterface2();
 		this.method2TestInterface2();
+		//call interface super method
+		TestInterface1.super.method1TestInterface1();
 
 	}
 
