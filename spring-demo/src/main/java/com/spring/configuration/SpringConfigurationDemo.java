@@ -6,11 +6,11 @@ import org.springframework.context.annotation.Configuration;
 
 import com.spring.samples.model.PersonModel;
 
-@Configuration
-@ComponentScan(value = "com.spring.samples.model")
+//@Configuration
+//@ComponentScan(value = "com.spring.samples.model")
 public class SpringConfigurationDemo {
-	@Bean
-	public PersonModel getPersonModel() {
-		return new PersonModel();
-	}
+//	@Bean
+//	public PersonModel getPersonModel() {
+//		return new PersonModel();
+//	}
 }
