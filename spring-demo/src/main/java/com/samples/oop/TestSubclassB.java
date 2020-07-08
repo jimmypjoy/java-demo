@@ -32,7 +32,7 @@ public class TestSubclassB extends TestParentClassA implements TestInterface1, T
 		this.method1TestInterface2();
 		this.method2TestInterface2();
 		//call interface super method
-		TestInterface1.super.method1TestInterface1();
+		TestInterface1.super.method1TestInterface1();	
 
 	}
 
@@ -40,5 +40,10 @@ public class TestSubclassB extends TestParentClassA implements TestInterface1, T
 	public void method2TestInterface1() {
 		System.out.println("implementation in class for method2TestInterface1");
 		
+	}
+	
+	@Override
+	public void method1TestInterface1() {
+		System.out.println("method1TestInterface1::TestSubclassB");
 	}
 }
