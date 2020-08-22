@@ -33,7 +33,7 @@ public class NavigateFileAndFolders {
 	public static void navigateFiles2(String folderName) throws IOException {
 		System.out.println("Printing using Path and Predicate");
 		Path root = Paths.get(folderName);
-		BiPredicate<Path, BasicFileAttributes> predicate = (p, a) -> p.toString().endsWith(".java");
+		BiPredicate<Path, BasicFileAttributes> predicate = (p, a) -> !a.isDirectory() && p.toString().endsWith(".java");
 		try (Stream<Path> paths = Files.find(root, 2, predicate)) {
 			paths.forEach(System.out::println);
 		}

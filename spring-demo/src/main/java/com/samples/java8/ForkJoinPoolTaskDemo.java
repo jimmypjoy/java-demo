@@ -7,6 +7,10 @@ import java.util.concurrent.RecursiveTask;
 
 public class ForkJoinPoolTaskDemo extends RecursiveTask<Long> {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2611187395038591793L;
 	private long workLoad = 0;
 
 	public ForkJoinPoolTaskDemo(long workLoad) {
@@ -54,7 +58,7 @@ public class ForkJoinPoolTaskDemo extends RecursiveTask<Long> {
 		System.out.println(Runtime.getRuntime().availableProcessors());
 		ForkJoinPool forkJoinPool = new ForkJoinPool(4);
 
-		ForkJoinPoolTaskDemo forkJoinPoolTaskDemo = new ForkJoinPoolTaskDemo(128);
+		ForkJoinPoolTaskDemo forkJoinPoolTaskDemo = new ForkJoinPoolTaskDemo(125);
 
 		long mergedResult = forkJoinPool.invoke(forkJoinPoolTaskDemo);
 

@@ -15,5 +15,8 @@ public class LocaleProperties {
 			System.out.println(key + "=" + val);
 		}
 
+		// from java class
+		ResourceBundle bundle1 = ResourceBundle.getBundle("com.samples.java8.Java_property_bundle", loc);
+		System.out.println(bundle1.getObject("property_key_from_java_class"));
 	}
 }

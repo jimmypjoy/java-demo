@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-public class InputOutputExample {
+public class FileInputOutputExample {
 	public static void main(String[] args) {
 
 		Path path = Paths.get(

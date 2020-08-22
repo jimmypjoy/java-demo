@@ -7,6 +7,10 @@ import java.util.concurrent.RecursiveAction;
 
 public class ForkJoinPoolActionDemo extends RecursiveAction {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4398151463075766731L;
 	private long workLoad = 0;
 
 	public ForkJoinPoolActionDemo(long workLoad) {

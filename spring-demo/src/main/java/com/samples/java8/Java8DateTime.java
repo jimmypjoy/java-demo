@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Period;
 import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.time.temporal.ChronoUnit;
@@ -20,11 +21,16 @@ public class Java8DateTime {
 		System.out.println(date1.isLeapYear());
 		System.out.println(date1.plusDays(10));
 
+		LocalDate date2 = LocalDate.now();
+		System.out.println(date2.isLeapYear());
+
 		System.out.println(LocalDateTime.now());
 		LocalTime localTime = LocalTime.of(10, 30);
 		Period period = Period.ofWeeks(1);
 		System.out.println(localTime);
-		//
+
+		// Populate date and time
+
 		LocalDateTime before = LocalDateTime.now();
 		try {
 			Thread.sleep(1);
@@ -36,6 +42,9 @@ public class Java8DateTime {
 		System.out.println(duration.getSeconds());
 		// Time Zones
 		System.out.println("Time Zones");
+		ZonedDateTime zonedDateTime = ZonedDateTime.of(after, ZoneId.of("Asia/Kolkata"));
+		System.out.println(zonedDateTime);
+		
 		Set<String> availableZoneIdSet = ZoneId.getAvailableZoneIds();
 		availableZoneIdSet.stream().forEach(System.out::println);
 		// format

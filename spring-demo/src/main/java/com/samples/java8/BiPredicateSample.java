@@ -11,9 +11,12 @@ public class BiPredicateSample {
 			if (predicate.test(str, "A"))
 				System.out.println(str);
 		}
-		
+
 		///
 		BiPredicate<String, String> predicate2 = String::equalsIgnoreCase;
-        System.out.println(predicate2.test("JaVa", "Java"));
+		System.out.println(predicate2.test("JaVa", "Java"));
+
+		BiPredicate<String, String> biPredicate3 = (str1, str2) -> str1.contains(str2);
+		System.out.println(biPredicate3.test("Java", "J"));
 	}
 }

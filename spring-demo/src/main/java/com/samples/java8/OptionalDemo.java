@@ -7,6 +7,7 @@ public class OptionalDemo {
 	public static void main(String[] args) {
 		OptionalDouble optionalEmpty = OptionalDouble.empty();
 		System.out.println(optionalEmpty.isPresent());
+		System.out.println(optionalEmpty.orElse(0));
 
 		OptionalDouble optionalDouble = OptionalDouble.of(100);
 		System.out.println(optionalDouble.isPresent());
@@ -24,5 +25,7 @@ public class OptionalDemo {
 		Integer year = 2016;
 		Optional<Integer> yearOptional = Optional.of(year);
 		System.out.println(yearOptional.filter(y -> y == 2016).isPresent());
+		//
+		optional1.ifPresent(System.out::println);
 	}
 }

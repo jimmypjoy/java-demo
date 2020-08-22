@@ -1,6 +1,12 @@
 package com.samples.java8.model;
 
-public class Employee {
+import java.io.Serializable;
+
+public class Employee implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -635482957578937357L;
 	private String firstName;
 	private String lastName;
 	private String fullName;

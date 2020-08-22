@@ -2,11 +2,23 @@ package com.samples.java8;
 
 public class LamdaExample {
 	public static void main(String[] args) {
+		//////////
+		int testVariable1 = 10;
+		// multiline lamda sample
+		ActionAfterClick2 actionAfterClick2 = (i1, i2) -> {
+			int i3 = 5;
+			return i1 * i2;
+		};
+		System.out.println(actionAfterClick2.action2(10, 15));
+		////////////////////////
 		ActionAfterClick x = () -> {
 			System.out.println("I'm action from anonymousclass");
 		};
 
 		ActionAfterClick2 x2 = (a, b) -> a + b;
+
+		x.action();
+		System.out.println(x2.action2(10, 20));
 
 		Button p = new Button();
 		Button p2 = new Button();
