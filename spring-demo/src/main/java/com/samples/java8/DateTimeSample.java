@@ -9,10 +9,11 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 import java.util.Set;
 
-public class Java8DateTime {
+public class DateTimeSample {
 
 	public static void main(String[] args) {
 		////////
@@ -44,7 +45,7 @@ public class Java8DateTime {
 		System.out.println("Time Zones");
 		ZonedDateTime zonedDateTime = ZonedDateTime.of(after, ZoneId.of("Asia/Kolkata"));
 		System.out.println(zonedDateTime);
-		
+
 		Set<String> availableZoneIdSet = ZoneId.getAvailableZoneIds();
 		availableZoneIdSet.stream().forEach(System.out::println);
 		// format
@@ -59,6 +60,9 @@ public class Java8DateTime {
 
 		LocalDate dateEpoch = LocalDate.ofEpochDay(0);
 		System.out.println(dateEpoch);
+
+		LocalTime time1 = LocalTime.now();
+		System.out.println(time1.get(ChronoField.MINUTE_OF_HOUR));
 
 	}
 

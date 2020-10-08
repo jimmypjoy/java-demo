@@ -53,7 +53,7 @@ public class ForkJoinPoolActionDemo extends RecursiveAction {
 		System.out.println(Runtime.getRuntime().availableProcessors());
 		ForkJoinPool forkJoinPool = new ForkJoinPool(4);
 
-		ForkJoinPoolActionDemo forkJoinPoolActionDemo = new ForkJoinPoolActionDemo(200);
+		ForkJoinPoolActionDemo forkJoinPoolActionDemo = new ForkJoinPoolActionDemo(203);
 
 		forkJoinPool.invoke(forkJoinPoolActionDemo);
 
