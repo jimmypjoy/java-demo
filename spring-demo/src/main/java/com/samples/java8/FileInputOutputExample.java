@@ -10,7 +10,21 @@ import java.util.Scanner;
 
 public class FileInputOutputExample {
 	public static void main(String[] args) {
-
+		//////
+		Path path1 = Paths.get("C:\\gitworkspace\\javademo\\java-demo\\spring-demo\\src\\main\\resources\\inputs\\");
+		System.out.println("getFileName: " + path1.getFileName());
+		System.out.println("getName(1): " + path1.getName(1));
+		System.out.println("getNameCount: " + path1.getNameCount());
+		System.out.println("getParent: " + path1.getParent());
+		System.out.println("getRoot: " + path1.getRoot());
+		System.out.println("subpath(0, 2): " + path1.subpath(0, 2));
+		System.out.println("toString: " + path1.toString());
+		int spaces = 1;
+		for (Path subPath : path1) {
+			System.out.format("%" + spaces + "s%s%n", "", subPath);
+			spaces += 2;
+		}
+		////
 		Path path = Paths.get(
 				"C:\\gitworkspace\\javademo\\java-demo\\spring-demo\\src\\main\\resources\\inputs\\testfileinput.txt");
 		try {

@@ -11,6 +11,7 @@ public class ForkJoinPoolTaskDemo extends RecursiveTask<Long> {
 	 * 
 	 */
 	private static final long serialVersionUID = 2611187395038591793L;
+	// simple use case to sum the int numbers
 	private long workLoad = 0;
 
 	public ForkJoinPoolTaskDemo(long workLoad) {
@@ -38,7 +39,7 @@ public class ForkJoinPoolTaskDemo extends RecursiveTask<Long> {
 
 		} else {
 			System.out.println("Doing workLoad myself: " + this.workLoad);
-			return workLoad * 3;
+			return workLoad;
 		}
 	}
 
@@ -58,7 +59,7 @@ public class ForkJoinPoolTaskDemo extends RecursiveTask<Long> {
 		System.out.println(Runtime.getRuntime().availableProcessors());
 		ForkJoinPool forkJoinPool = new ForkJoinPool(4);
 
-		ForkJoinPoolTaskDemo forkJoinPoolTaskDemo = new ForkJoinPoolTaskDemo(125);
+		ForkJoinPoolTaskDemo forkJoinPoolTaskDemo = new ForkJoinPoolTaskDemo(160);
 
 		long mergedResult = forkJoinPool.invoke(forkJoinPoolTaskDemo);
 

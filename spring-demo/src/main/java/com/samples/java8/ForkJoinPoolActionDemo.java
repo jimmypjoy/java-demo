@@ -11,6 +11,7 @@ public class ForkJoinPoolActionDemo extends RecursiveAction {
 	 * 
 	 */
 	private static final long serialVersionUID = -4398151463075766731L;
+	// In reality this could be a list of tasks
 	private long workLoad = 0;
 
 	public ForkJoinPoolActionDemo(long workLoad) {

@@ -5,7 +5,7 @@ import java.util.concurrent.BlockingDeque;
 
 public class BlockingQueueSample {
 	public static void main(String[] args) {
-		ArrayBlockingQueue<Integer> blockingDeque = new ArrayBlockingQueue<Integer>(3);
+		ArrayBlockingQueue<Integer> blockingDeque = new ArrayBlockingQueue<Integer>(2);
 		try {
 
 			blockingDeque.offer(1);
