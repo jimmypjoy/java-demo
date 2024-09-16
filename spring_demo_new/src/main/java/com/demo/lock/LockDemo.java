@@ -2,8 +2,6 @@ package com.demo.lock;
 
 import java.util.concurrent.locks.ReentrantLock;
 
-import com.demo.test.Test;
-
 public class LockDemo {
 
 	private final ReentrantLock lock = new ReentrantLock();

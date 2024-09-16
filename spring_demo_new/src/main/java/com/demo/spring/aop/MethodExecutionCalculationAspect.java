@@ -13,7 +13,7 @@ public class MethodExecutionCalculationAspect {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	@Around("com.samples.spring.aop.CommonJoinPointConfig.businessLayerExecution()")
+	@Around("com.demo.spring.aop.CommonJoinPointConfig.businessLayerExecution()")
 	public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
 		long startTime = System.currentTimeMillis();
 
@@ -25,7 +25,7 @@ public class MethodExecutionCalculationAspect {
 		return returnProceed;
 	}
 
-	@Around("com.samples.spring.aop.CommonJoinPointConfig.trackTimeAnnotation()")
+	@Around("com.demo.spring.aop.CommonJoinPointConfig.trackTimeAnnotation()")
 	public Object aroundWithAnnotation(ProceedingJoinPoint joinPoint) throws Throwable {
 		long startTime = System.currentTimeMillis();
 

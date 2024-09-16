@@ -14,9 +14,9 @@ public class JDBCDemo {
 		ResultSet resultSet = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
-			String url = "jdbc:mysql://localhost:3306/demo?useSSL=false";
+			String url = "jdbc:mysql://localhost:3306/world?useSSL=false";
 			String user = "root";
-			String password = "root";
+			String password = "mysql";
 
 			connection = DriverManager.getConnection(url, user, password);
 			System.out.println("Database metadata");
@@ -27,7 +27,7 @@ public class JDBCDemo {
 					.supportsResultSetConcurrency(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE));
 
 			statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
-			String query = "select * from CUSTOMER";
+			String query = "select * from COUNTRY";
 			resultSet = statement.executeQuery(query);
 			System.out.println("Printing resultset metadata####");
 			ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
@@ -44,13 +44,8 @@ public class JDBCDemo {
 			System.out.println("Printing result ####");
 			System.out.println("Id, first_name, last_name ,email");
 			while (resultSet.next()) {
-				System.out.println(resultSet.getInt("id") + "," + resultSet.getString("first_name") + ", :"
-						+ resultSet.getString("last_name") + " ,:" + resultSet.getString("email"));
-				if (resultSet.getInt("id") == 1) {
-					System.out.println("Updating resultset ####");
-					resultSet.updateString("first_name", "David1");
-					resultSet.updateRow();
-				}
+				System.out.println(resultSet.getString("Code") + "," + resultSet.getString("Name") + ", :"
+						+ resultSet.getString("Continent") + " ,:" + resultSet.getString("Population"));
 			}
 			resultSet.close();
 			statement.close();

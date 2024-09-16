@@ -18,7 +18,7 @@ public class DemoBeforeAspect {
 	// What kind of method calls I would intercept
 	// execution(* PACKAGE.*.*(..))
 	// Weaving & Weaver
-	@Before("com.samples.spring.aop.CommonJoinPointConfig.businessLayerExecution()")
+	@Before("com.demo.spring.aop.CommonJoinPointConfig.businessLayerExecution()")
 	public void before(JoinPoint joinPoint) {
 		// Advice
 		logger.info(" #####DemoBeforeAspect ");

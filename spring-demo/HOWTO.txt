@@ -1,7 +1,0 @@
-Spring demo sample restws using spring boot
-http://localhost:8080/spring-demo/greetings
-
-CXF rest GET end point
-http://localhost:8080/spring-demo/services/patientservice/patients/
-
-

@@ -4,11 +4,11 @@ import org.aspectj.lang.annotation.Pointcut;
 
 public class CommonJoinPointConfig {
 
-	@Pointcut("execution(* com.samples.spring.data.*.*(..))")
+	@Pointcut("execution(* com.demo.spring.data.*.*(..))")
 	public void dataLayerExecution() {
 	}
 
-	@Pointcut("execution(* com.samples.spring.business.*.*(..))")
+	@Pointcut("execution(* com.demo.spring.business.*.*(..))")
 	public void businessLayerExecution() {
 	}
 
@@ -20,7 +20,7 @@ public class CommonJoinPointConfig {
 	public void beanContainingDao() {
 	}
 
-	@Pointcut("within(com.samples.spring.data..*)")
+	@Pointcut("within(com.demo.spring.data..*)")
 	public void dataLayerExecutionWithWithin() {
 	}
 
