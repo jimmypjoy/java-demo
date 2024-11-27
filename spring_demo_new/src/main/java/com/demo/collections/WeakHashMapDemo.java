@@ -1,5 +1,6 @@
 package com.demo.collections;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.WeakHashMap;
 
@@ -24,8 +25,9 @@ public class WeakHashMapDemo {
 	public static void main(String[] args) throws InterruptedException {
 
 		Map<User, String> map = new WeakHashMap<>();
+//		Map<User, String> map = new HashMap<>();
 
-		User u = new User(); // 123
+		User u = new User(); 
 		map.put(u, "Tom");
 
 		System.out.println(map);
@@ -36,6 +38,7 @@ public class WeakHashMapDemo {
 		Thread.sleep(5000);
 
 		System.out.println(map);
+		
 
 	}
 

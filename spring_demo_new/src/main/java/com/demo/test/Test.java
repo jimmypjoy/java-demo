@@ -1,17 +1,13 @@
 package com.demo.test;
 
-import java.nio.*;
- 
 public class Test {
 
-	public class Animal2 {}
+	String first;
+	String last;
+	String full = first + last;
 
 	public static void main(String[] args) {
-
-	
+		Test t = new Test();
+		System.out.println(t.full);
 	}
 }
-
-
-
- 
