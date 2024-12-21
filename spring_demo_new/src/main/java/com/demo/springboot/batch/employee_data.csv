@@ -1,0 +1,3 @@
+id,name,department_id,address,salary,skill,comments,age
+9,Jane Smith,1,"456 Oak Street, Springfield",75000,Python,Mid-level Developer with 3 years of experience,28
+10,Robert Brown,1,"789 Pine Avenue, Springfield",80000,C++,Team Lead with 7 years of experience,35

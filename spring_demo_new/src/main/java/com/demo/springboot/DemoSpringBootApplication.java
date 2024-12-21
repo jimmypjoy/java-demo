@@ -1,5 +1,6 @@
 package com.demo.springboot;
 
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,20 +8,23 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.jms.annotation.EnableJms;
 import org.springframework.web.client.RestTemplate;
 
 import com.demo.springboot.restclient.EmployeeRestTemplate;
 
 @SpringBootApplication
-public class DemoSpringbootApplication extends SpringBootServletInitializer {
+@EnableBatchProcessing
+@EnableJms
+public class DemoSpringBootApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoSpringbootApplication.class, args);
+		SpringApplication.run(DemoSpringBootApplication.class, args);
 	}
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(DemoSpringbootApplication.class);
+		return application.sources(DemoSpringBootApplication.class);
 	}
 
 	@Bean
