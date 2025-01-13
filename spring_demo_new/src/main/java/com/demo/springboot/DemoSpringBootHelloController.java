@@ -27,7 +27,7 @@ public class DemoSpringBootHelloController {
 	public String testSendMessageToActiveMQ(
 			@RequestParam(value = "message", defaultValue = "Hello ActiveMQ!") String message) {
 		System.out.println("Sending message to ActiveMQ: " + message);
-		demoJMSSender.sendMessage(message);
+//		demoJMSSender.sendMessage(message);
 		return "Message sent to ActiveMQ: " + message;
 	}
 }
