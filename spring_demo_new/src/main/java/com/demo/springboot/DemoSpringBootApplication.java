@@ -8,14 +8,12 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.jms.annotation.EnableJms;
 import org.springframework.web.client.RestTemplate;
 
 import com.demo.springboot.restclient.EmployeeRestTemplate;
 
 @SpringBootApplication
 @EnableBatchProcessing
-@EnableJms
 public class DemoSpringBootApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
