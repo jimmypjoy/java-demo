@@ -8,3 +8,9 @@ spring_demo_gateway/.project
 spring_demo_messaging/.classpath
 spring_demo_messaging/.project
 /spring_demo_messaging/.settings
+spring_demo_configserver/.classpath
+spring_demo_configserver/.project
+/spring_demo_configserver/.settings
+spring_demo_tracer/.classpath
+spring_demo_tracer/.project
+/spring_demo_tracer/.settings
