@@ -14,7 +14,7 @@ public class FilesDemo {
 	public static void main(String[] args) throws IOException {
 		// print all .java files
 //		String folderName = "C:\\gitworkspace\\javademo\\java-demo\\spring-demo\\src\\main\\java\\com\\samples";
-		String folderName = "C:\\gitworkspace\\java-demo\\spring_demo_new\\src\\main\\java\\com\\demo";
+		String folderName = "C:\\gitworkspace\\java-demo\\core_java_demo\\src\\main\\java\\com\\demo";
 		navigateFiles(new File(folderName), ".java");
 		navigateFiles2(folderName);
 	}

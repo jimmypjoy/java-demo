@@ -16,7 +16,7 @@ public class NIODemo extends SimpleFileVisitor<Path> {
 	public static void main(String[] args) throws Exception {
 		boolean newFile = false;
 		File file1 = new File(
-				"C:\\gitworkspace\\java-demo\\spring_demo_new\\src\\main\\resources\\inputs\\new_file.txt");
+				"C:\\gitworkspace\\java-demo\\core_java_demo\\src\\main\\resources\\inputs\\new_file.txt");
 
 		System.out.println(file1.exists());
 
@@ -29,7 +29,7 @@ public class NIODemo extends SimpleFileVisitor<Path> {
 
 		// FileReader
 		File fileInput = new File(
-				"C:\\gitworkspace\\java-demo\\spring_demo_new\\src\\main\\resources\\inputs\\testfileinput.txt");
+				"C:\\gitworkspace\\java-demo\\core_java_demo\\src\\main\\resources\\inputs\\testfileinput.txt");
 		FileReader fileReader = new FileReader(fileInput);
 		char[] in = new char[500];
 		fileReader.read(in);

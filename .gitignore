@@ -17,3 +17,6 @@ spring_demo_tracer/.project
 /spring_demo_configserverclient/.settings
 spring_demo_configserverclient/.project
 spring_demo_configserverclient/.classpath
+core_java_demo/.classpath
+core_java_demo/.project
+/core_java_demo/.settings
