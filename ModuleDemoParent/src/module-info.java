@@ -1,3 +1,3 @@
 module patientmanagement {
-	exports com.demo.mouleparent to patientbilling;
+	exports com.demo.moduleparent to patientbilling;
 }

@@ -17,5 +17,4 @@ public class DemoSpringBootHelloController {
 		String message = demoSpringBootService.getGreetingMessage(name);
 		return message;
 	}
-
 }

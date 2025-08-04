@@ -1,6 +1,6 @@
 package com.demo.moduleclient;
 
-import com.demo.mouleparent.PatientRegistration;
+import com.demo.moduleparent.PatientRegistration;
 
 public class PatientBilling {
 

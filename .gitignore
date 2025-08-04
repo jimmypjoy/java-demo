@@ -20,3 +20,4 @@ spring_demo_configserverclient/.classpath
 core_java_demo/.classpath
 core_java_demo/.project
 /core_java_demo/.settings
+*.class

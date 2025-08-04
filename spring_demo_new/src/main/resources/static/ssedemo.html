@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SSE Long Task</title>
+</head>
+<body>
+	<h2>Start Long Task</h2>
+	<button onclick="startProcess()">Start</button>
+	<p id="status">Waiting to start...</p>
+
+	<script>
+        function startProcess() {
+            document.getElementById("status").textContent = "Process started...";
+
+            fetch("/springdemo/start-process", { method: "POST" })
+                .then(res => res.json())
+                .then(data => {
+                    const taskId = data.taskId;
+                    const eventSource = new EventSource(`/springdemo/subscribe/${taskId}`);
+
+                    eventSource.onmessage = function(event) {
+                        document.getElementById("status").textContent = event.data;
+                        eventSource.close();
+                    };
+
+                    eventSource.onerror = function(event) {
+                        console.error("SSE error:", event);
+                        document.getElementById("status").textContent = "Error receiving update.";
+                        eventSource.close();
+                    };
+                });
+        }
+    </script>
+</body>
+</html>

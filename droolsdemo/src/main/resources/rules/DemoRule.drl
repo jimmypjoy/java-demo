@@ -1,0 +1,11 @@
+package rules
+
+import com.demo.drools.Person;
+
+rule "Is adult"
+    when
+        $p : Person(age > 18)
+    then
+        $p.addMessage($p.getName() + " is considered an adult.");
+        System.out.println("Rule triggered for: " + $p.getName());
+end
