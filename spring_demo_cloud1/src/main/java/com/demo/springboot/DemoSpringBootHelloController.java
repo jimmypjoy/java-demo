@@ -1,6 +1,6 @@
 package com.demo.springboot;
 
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,8 +15,7 @@ public class DemoSpringBootHelloController {
 	@RequestMapping("/hello")
 	public String hello() {
 
-		Random random = new Random();
-		int randomNumber = random.nextInt(100);
+		int randomNumber = ThreadLocalRandom.current().nextInt(100);
 		System.out.println("###########################");
 		logger.info("Logger statement inside DemoSpringBootHelloController/hello");
 		System.out.println("Inside DemoSpringBootHelloController of Cloud1");

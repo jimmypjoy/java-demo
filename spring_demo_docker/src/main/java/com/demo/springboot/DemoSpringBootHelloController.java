@@ -1,6 +1,6 @@
 package com.demo.springboot;
 
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,8 +10,7 @@ public class DemoSpringBootHelloController {
 
 	@RequestMapping("/hello")
 	public String hello() {
-		Random random = new Random();
-		int randomNumber = random.nextInt(100);
+		int randomNumber = ThreadLocalRandom.current().nextInt(100);
 		return "Hello JMJ Spring Boot: " + randomNumber;
 	}
 

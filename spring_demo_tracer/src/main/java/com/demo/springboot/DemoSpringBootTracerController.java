@@ -1,6 +1,6 @@
 package com.demo.springboot;
 
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,8 +21,7 @@ public class DemoSpringBootTracerController {
 	@RequestMapping("/tracerdemo")
 	public String hello() {
 
-		Random random = new Random();
-		int randomNumber = random.nextInt(100);
+		int randomNumber = ThreadLocalRandom.current().nextInt(100);
 		System.out.println("###########################");
 		String traceId = tracer.currentSpan().context().traceId();
 		System.out.println("traceId:"+traceId);

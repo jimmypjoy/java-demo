@@ -1,6 +1,6 @@
 package com.demo.springboot;
 
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 import org.springframework.stereotype.Service;
 
@@ -8,8 +8,7 @@ import org.springframework.stereotype.Service;
 public class DemoSpringBootServiceImpl {
 	public String getGreetingMessage(String name) {
 		System.out.println("Invoked DemoSpringBootServiceImpl.getGreetingMessage with name: " + name);
-		Random random = new Random();
-		int randomNumber = random.nextInt(100);
+		int randomNumber = ThreadLocalRandom.current().nextInt(100);
 		return "Hello JMJ from Spring Demo new: " + randomNumber + "	" + name;
 
 	}
