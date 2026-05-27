@@ -1,27 +1,13 @@
 package com.demo.test;
 
+import java.util.List;
+
 public class Test {
-	public void print(byte x) {
-		System.out.print("byte-");
+	public static void main(String[] args) throws Exception {
+
+		var numStream = List.of(0, 1, 22, 3, -13, 4, -5, 6, 7, 7, 8, 11);
+		var num = numStream.stream().distinct().filter(i -> i % 3 == 1).sorted().findFirst().get();
+		System.out.println(num);
 	}
 
-	public void print(int x) {
-		System.out.print("int-");
-	}
-
-	public void print(float x) {
-		System.out.print("float-");
-	}
-
-	public void print(Object x) {
-		System.out.print("Object-");
-	}
-
-	public static void main(String[] args) {
-		Test t = new Test();
-		short s = 123;
-		t.print(s);
-		t.print(true);
-		t.print(6.789);
-	}
 }
